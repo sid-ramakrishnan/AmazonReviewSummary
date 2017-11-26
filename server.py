@@ -45,7 +45,7 @@ class FrequencySummarizer:
       which represent the summary of text.
     """
     sents = sent_tokenize(text)
-    assert n <= len(sents)
+    n=max(1,len(sents)/20)
     word_sent = [word_tokenize(s.lower()) for s in sents]
     self._freq = self._compute_frequencies(word_sent)
     ranking = defaultdict(int)

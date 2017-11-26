@@ -19,11 +19,7 @@ if(request.todo == "GetSummary")
         //contentType: 'application/json;charset=UTF-8',
         contentType: 'application/json',
         data : JSON.stringify(jsonObj),
-        //data: JSON.stringify([{title: 'hallo', article: 'test'},{title: 'hinm', article: 'tehist'}]),
         dataType:"json",
-        // xhrFields: {
-        //     withCredentials: true
-        // },
         crossDomain: true,
         success : function(response){ 
             console.log("Respose reached");

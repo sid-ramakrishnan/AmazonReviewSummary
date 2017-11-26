@@ -11,6 +11,20 @@ if(request.todo == "GetSummary")
     jsonObj.push(item);
   	});
     console.log(jsonObj);
+
+
+    $.ajax({
+        type : 'POST',
+        url : "{{url_for('test')}}",
+        contentType: 'application/json;charset=UTF-8',
+        data : {'data':jsonObj},
+        success : function(response){ 
+            console.log("Respose reached");
+            console.log(response); 
+        }
+    });
+
+
 }
 if(request.todo == "GetSummaryPara")
 {
@@ -20,6 +34,17 @@ if(request.todo == "GetSummaryPara")
     item["text"] = request.text;
     jsonObj.push(item);
   	console.log(jsonObj);
+
+    $.ajax({
+        type : 'POST',
+        url : "{{url_for('test')}}",
+        contentType: 'application/json;charset=UTF-8',
+        data : {'data':jsonObj},
+        success : function(response){ 
+            console.log("Respose reached");
+            console.log(response); 
+        }
+    });
 }
 
 });

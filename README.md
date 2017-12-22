@@ -1,5 +1,7 @@
 # AmazonReviewSummary
 
+For Cleaning Data and other Pre Processing steps, view the instructions in the Readme of "data cleaning and visualization" folder.
+
 1) Chrome Ext UI : 
 
 To make this work carry out the following steps:
@@ -21,3 +23,9 @@ Additional feature:
 User can also summarize individual review paragraphs if needed. Go to reviews page and highlight a paragraph. Right click and you will see the option
 to get the summary. Inspect element once again and you will see one array object. This will indicate that the data has been collected properly.
 
+Backend Model Training :
+
+1) We train in the train.py file which saves the summarization models in a json file.
+2) In server.py at startup, we load the saved Json Models and the required word to index dictionaries.
+3) The UI makes a REST API call to the Flask API exposed
+4) The response is sent back as a Json Object to the UI and these summarized results are shown on a new page.

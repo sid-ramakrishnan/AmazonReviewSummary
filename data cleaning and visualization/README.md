@@ -8,3 +8,5 @@
 - To generate the scatterplot, run scatterplot.py and then open the html file generated.
 
 - Histogram plots can also be generated using the plots.py file.
+
+[0]: http://jmcauley.ucsd.edu/data/amazon/
